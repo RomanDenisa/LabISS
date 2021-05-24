@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="432.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProgrammerCtrl">
+   <children>
+      <VBox layoutX="33.0" layoutY="24.0" prefHeight="382.0" prefWidth="601.0" spacing="25.0">
+         <children>
+            <Label text="Software bugs existent:" />
+            <HBox prefHeight="265.0" prefWidth="602.0" spacing="10.0">
+               <children>
+                  <TableView fx:id="bugsExistent" prefHeight="280.0" prefWidth="376.0">
+                    <columns>
+                      <TableColumn fx:id="name" prefWidth="75.0" text="Name" />
+                      <TableColumn fx:id="description" prefWidth="156.59996032714844" text="Description" />
+                        <TableColumn fx:id="date" prefWidth="66.60003662109375" text="Date" />
+                        <TableColumn fx:id="status" prefWidth="78.0" text="Status" />
+                    </columns>
+                  </TableView>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="56.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.8" minWidth="10.0" prefWidth="144.8" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="130.4" minHeight="10.0" prefHeight="81.4" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="107.4" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="122.6" minHeight="10.0" prefHeight="119.6" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleAssign" prefHeight="26.0" prefWidth="154.0" text="Assign bug" GridPane.columnIndex="1" />
+                        <Button mnemonicParsing="false" onAction="#handleViewAssigned" prefHeight="26.0" prefWidth="148.0" text="View assigned bugs" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="380.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TesterCtrl">
+   <children>
+      <VBox layoutX="25.0" layoutY="23.0" prefHeight="394.0" prefWidth="618.0" spacing="10.0">
+         <children>
+            <Label text="Bugs found by you:" />
+            <HBox prefHeight="246.0" prefWidth="550.0" spacing="15.0">
+               <children>
+                  <TableView fx:id="bugsFoundTable" prefHeight="246.0" prefWidth="416.0">
+                    <columns>
+                      <TableColumn fx:id="name" prefWidth="88.39999008178711" text="Name" />
+                      <TableColumn fx:id="description" prefWidth="162.8000030517578" text="Description" />
+                        <TableColumn fx:id="date" prefWidth="86.60003662109375" text="Date" />
+                        <TableColumn fx:id="status" prefWidth="79.0" text="Status" />
+                    </columns>
+                  </TableView>
+                  <VBox prefHeight="264.0" prefWidth="179.0" spacing="35.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleAdd" prefHeight="26.0" prefWidth="153.0" text="Add bug" />
+                        <Button mnemonicParsing="false" onAction="#handleViewFixed" prefHeight="26.0" prefWidth="161.0" text="View fixed bugs" />
+                     </children>
+                     <padding>
+                        <Insets left="25.0" top="65.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="423.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AssignedBugsCtrl">
+   <children>
+      <VBox layoutX="30.0" layoutY="24.0" prefHeight="368.0" prefWidth="628.0" spacing="25.0">
+         <children>
+            <Label text="Bugs assigned to you:" />
+            <HBox prefHeight="219.0" prefWidth="538.0" spacing="15.0">
+               <children>
+                  <TableView fx:id="assignedBugs" prefHeight="219.0" prefWidth="399.0">
+                    <columns>
+                      <TableColumn fx:id="name" prefWidth="64.20001411437988" text="Name" />
+                      <TableColumn fx:id="description" prefWidth="174.5999755859375" text="Description" />
+                        <TableColumn fx:id="date" prefWidth="48.60002136230469" text="Date" />
+                        <TableColumn fx:id="status" prefWidth="106.4000244140625" text="Status" />
+                    </columns>
+                  </TableView>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="32.00000190734863" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.99999809265137" minWidth="10.0" prefWidth="167.99999809265137" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="103.4" minHeight="10.0" prefHeight="103.4" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="67.4" minHeight="10.0" prefHeight="42.400000000000006" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextArea fx:id="aditionalInfo" prefHeight="74.0" prefWidth="129.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Additional information added:" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#handleFixBug" prefHeight="26.0" prefWidth="128.0" text="Fix bug" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
